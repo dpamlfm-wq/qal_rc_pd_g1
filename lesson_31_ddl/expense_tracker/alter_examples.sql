@@ -1,0 +1,11 @@
+ALTER TABLE users
+ADD COLUMN phone VARCHAR(20);
+
+ALTER TABLE users
+ALTER COLUMN phone TYPE VARCHAR(30);
+
+ALTER TABLE users
+ADD CONSTRAINT unique_phone UNIQUE(phone);
+
+ALTER TABLE users
+DROP CONSTRAINT unique_phone;
